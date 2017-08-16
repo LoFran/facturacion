@@ -1,0 +1,145 @@
+<ol class="breadcrumb animated fadeIn fast">
+	<li><a href="#"><i class="fa-fa-tty"></i> Administración</a></li>
+	<li class="active">Creación de Cuenta</li>
+</ol>
+
+<div class="container">
+
+	<form name="frmCuenta"
+				ng-submit="guardar( cuentaSel, frmCuenta )"
+				novalidate="novalidate"
+				class="form-horizontal">
+
+					<div class="form-group">
+						<label class="container" for="usuario">Nombre de Usuario</label>
+							<div class="container">
+						 <input type="text" class="form-control" placeholder="Usuario" ng-model="cuentaSel.usuario" required>
+							<span class="help-block">Nombre del Usuario</span>
+						</div>
+					</div>
+
+            <div class="form-group">
+              <label class="container" for="nombre">Nombre</label>
+	              <div class="container">
+	             <input type="text" class="form-control" placeholder="Nombre" ng-model="cuentaSel.nombre" required>
+	              <span class="help-block">Nombre del Usuario</span>
+            	</div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="container" for="telefono">Especialidad</label>
+	              <div class="container">
+									<select class="form-control" ng-model="cuentaSel.especialidad" placeholder="Especialidad" required>
+						        <option value="1">Super Usuario</option>
+						        <option value="2">Directivos</option>
+						        <option value="3">Docentes</option>
+										<option value="4">Alumnos</option>
+										<option value="5">Equipo de Apoyo</option>
+										<option value="6">Apoderados</option>
+										<option value="7">Administración</option>
+						      </select>
+									<span class="help-block">Especialidad</span>
+	              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="container" for="correo">Email</label>
+              <div class="container">
+								<input type="correo" class="form-control" placeholder="Correo" ng-model="cuentaSel.correo" name="correo" required>
+							<span class="help-block">Este Email sera utilizado para las notificaciones de mensajes</span>
+              </div>
+            </div>
+
+						<div class="form-group">
+              <label class="container" placeholder="Sexo" for="sexo">Sexo</label>
+	              <div class="container">
+									<select class="form-control" ng-model="cuentaSel.sexo" required>
+						        <option>Femenino</option>
+						        <option>Masculino</option>
+						        <option>Otro</option>
+									</select>
+									<span class="help-block">Sexo</span>
+	              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="container" for="contraseña">Contraseña </label>
+              <div class="container">
+                <input type="password" class="form-control" placeholder="Contraseña" ng-model="cuentaSel.contrasena" required>
+								<span class="help-block">Contraseña </span>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="container" for="confirme">Confirme</label>
+              <div class="container">
+                <input ng-model="cuentaSel.confirme" id="confirme" name="confirme" type="password" placeholder="Confirmar" class="form-control input-md" required>
+                <span class="help-block">Confirme su contraseña</span>
+              </div>
+            </div>
+
+						<!--<div class="form-group">
+					    <label class="col-md-4 control-label" for="imagen">Foto Perfil</label>
+							<div class="col-md-4">
+								<input ng-model="cuentaSel.imagen"  name="imagen" id="imagen" name="imagen" type="file" class="form-control input-md">
+								<p class="help-block">Adjunte su foto de perfil.</p>
+							</div>
+					  </div>-->
+
+						<!--<div class="form-group">
+					    <label class="col-md-4 control-label" for="imagen">Foto Perfil</label>
+							<div class="col-md-4">
+
+								<!--<img id="dist/img/avatar.png" src="dist/img/avatar.png" style="width: 24%; padding: 4px; cursor:pointer;">
+								<img id="imagen2" src="dist/img/avatar2.png" style="width: 24%; padding: 4px; cursor:pointer;">-->
+								<!--<img id="imagen3" src="dist/img/avatar3.png" style="width: 24%; padding: 4px; cursor:pointer;"><img id="imagen4" src="dist/img/avatar4.png" style="width: 24%; padding: 4px; cursor:pointer;">
+								<img id="imagen5" src="dist/img/avatar5.png" style="width: 24%; padding: 4px; cursor:pointer;"><img id="imagen6" src="dist/img/avatar8.png" style="width: 24%; padding: 4px; cursor:pointer;">
+								<img id="imagen7" src="dist/img/avatar_2x.png" style="width: 24%; padding: 4px; cursor:pointer;"><img id="imagen8" src="dist/img/avatar_2x.png" style="width: 24%; padding: 4px; cursor:pointer;">-->
+
+							<!--</div>
+					  </div>-->
+
+
+		        <!--<div class="form-group">
+		            <h4>Foto Perfil</h4>
+		            <div class="input-group">
+		                <label class="input-group-btn">
+		                    <span class="btn btn-primary">
+		                        Buscar&hellip; <input type="file" style="display: none;" multiple>
+		                    </span>
+		                </label>
+		                <input ng-model="cuentaSel.imagen2" name="imagen2" id="imagen2" type="text" class="form-control">
+		            </div>
+		            <span class="help-block">
+		                Adjunte su foto de perfil.
+		            </span>
+		        </div>-->
+
+            <div class="form-group">
+              <label class="container" for="guardar"></label>
+              <div class="container">
+								<div class="modal-footer">
+				          <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp;&nbsp;Guardar</button>
+				        </div>
+              </div>
+            </div>
+
+
+						<div id="mensaje" class="row" ng-show="noInsertado">
+							<div class="alert alert-danger">
+								{{ mensaje }}
+							</div>
+						</div>
+
+						<div id="mensaje2" class="row" ng-show="validaOK">
+							<div class="alert alert-success">
+								{{ mensaje }}
+							</div>
+						</div>
+
+        </form>
+		</div>

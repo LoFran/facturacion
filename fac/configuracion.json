@@ -1,0 +1,14 @@
+{
+
+	"version":"1.0.0",
+	"aplicativo": "G.E.A",
+	"iniciales":"G.E.A",
+	"autor":"Franco Bello",
+	"anio": 2017,
+	"web": "http://www.lofran.cl",
+	"empresa":"LoFran Soluciones Tecnologicas",
+	"correo":"support@lofran.cl",
+	"telefono":"(+569)997705095",
+	"direccion": "Santiago de Chile",
+	"ISV": 0.12
+}

@@ -1,0 +1,42 @@
+
+<!-- Menu Toggle Button -->
+<a href="" class="dropdown-toggle" data-toggle="dropdown">
+  <!-- The user image in the navbar-->
+  <img src="{{ configOpta.imagen_usuario }}" class="user-image" alt="User Image">
+  <!-- hidden-xs hides the username on small devices so only the image appears. -->
+  <span class="hidden-xs">{{ configOpta.nombre }}</span>
+</a>
+<ul class="dropdown-menu">
+  <!-- The user image in the menu -->
+  <li class="user-header">
+    <img src="{{ configOpta.imagen_usuario }}" class="img-circle" alt="User Image">
+    <p ng-controller="clientesCtrl">
+      {{ configOpta.nombre }}
+      <small>Miembro desde el 2017</small>
+      <small>Perfil: {{ configOpta.gls_rol }}</small>
+    </p>
+  </li>
+  <!-- Menu Body -->
+  <!--<li class="user-body">
+    <div class="col-xs-4 text-center">
+      <a href="">Followers</a>
+    </div>
+    <div class="col-xs-4 text-center">
+      <a href="">Sales</a>
+    </div>
+    <div class="col-xs-4 text-center">
+      <a href="">Friends</a>
+    </div>
+  </li>-->
+  <!-- Menu Footer-->
+  <li class="user-footer">
+    <div class="pull-left">
+      <a href="" class="btn btn-default btn-flat">Perfil</a>
+    </div>
+    <div class="pull-right">
+      <a href="" class="btn btn-default btn-flat" ng-click="salir()">Salir</a>
+    </div>
+  </li>
+
+
+</ul>
